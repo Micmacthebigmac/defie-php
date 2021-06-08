@@ -9,13 +9,15 @@ if ($_SESSION['username']) {
         $query = $db->prepare($sql);
         $query->bindValue(':id', $id, PDO::PARAM_STR);
         $query->execute();
-        $result = $query->fetchAll(PDO::FETCH_ASSOC);
+        $result = $query->fetch();
+        //var_dump($result); 
     } else {
         echo 'id manquant';
     }
 } else {
     echo 'identifiez-vous';
 }
+
 
 ?>
 
@@ -30,9 +32,17 @@ if ($_SESSION['username']) {
 <body>
     
 
-<?= $result['project_title'] ?>
+    <?= $result['project_title'] ?>
+    <br>
     <?= $result['project_context'] ?>
+    <br>
     <?= $result['project_specs'] ?>
+    <br>
+    <a href="home.php"><button>Retour</button></a>
 
+    <a href="project-delete.php?id=<?= $result['id'] ?>"><button>supprimer « <?= $result['project_title'] ?> »</button></a>
 
-    <a href="project-delete.php?id=<?= $result['project_id'] ?>">supprimer <?= $result['project_title'] ?></a>
+    </body>
+
+</html>
+</html>
