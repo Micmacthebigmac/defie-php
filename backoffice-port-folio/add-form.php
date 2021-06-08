@@ -4,14 +4,17 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ajouter un object</title>
+    <title>ajouter un projet</title>
 </head>
+
 <body>
-<form action="add-form-handler.php" method="post">
+    <form action="add-form-handler.php" method="post">
+
         <div>
             <label for="input_title">Titre</label>
             <input type="text" id="input_title" name="project_title">
@@ -46,4 +49,5 @@ session_start();
 
     </form>
 </body>
+
 </html>
