@@ -18,14 +18,29 @@ $result = $query->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
     
+<tr>
+<td>TITRE</td>
+<td>AUTEUR</td>
+<td>COMMENTAIRE</td>
+</tr>
+
+<table>
 <?php
 
 foreach ($result as $blog) {
 ?>
-    <?= $blog['nobject'] ?>
+    <tr>
+    <td><?= $blog['nobject'] ?></td>
+    <td><?= $blog['nauthor'] ?></td>
+    <td><?= $blog['comment'] ?></td>
+    </tr>
+
 <?php
 }
 ?>
+
+</table>
+
 
  <a href="form.php">faire un article</a>
 
