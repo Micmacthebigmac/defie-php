@@ -41,6 +41,7 @@ if ($_SESSION['username']) {
     <a href="home.php"><button>Retour</button></a>
 
     <a href="project-delete.php?id=<?= $result['id'] ?>"><button>supprimer « <?= $result['project_title'] ?> »</button></a>
+    <a href="project-edit.php?id=<?= $result['id'] ?>"><button>modifier « <?= $result['project_title'] ?> »</button></a>
 
     </body>
 
