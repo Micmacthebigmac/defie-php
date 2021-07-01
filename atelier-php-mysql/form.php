@@ -13,10 +13,10 @@
     <form action="handler.php" method="post">
     
         <label for="db-object">Sujet</label>
-        <input type="text" name="nobject" id="db-object" value="hervé">
+        <input type="text" name="nobject" id="db-object">
 
         <label for="db-author">Auteur</label>
-        <input type="text" name="nauthor" id="db-author" value="hervé">
+        <input type="text" name="nauthor" id="db-author">
 
         <label for="db-text">Commentaire</label>
         <textarea name="comment" id="db-text"></textarea>
